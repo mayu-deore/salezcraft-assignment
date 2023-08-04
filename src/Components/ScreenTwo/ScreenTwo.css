@@ -1,0 +1,16 @@
+/* MyComponent.css */
+.hover-orange {
+    color: black; /* Initial text color (you can change it to any color you want) */
+    transition: color 0.3s; /* Adding a smooth transition effect on color change */
+  }
+  
+  .hover-orange:hover {
+    color: orange; /* Text color when hovering */
+    cursor: pointer;
+    border-bottom: solid orange;
+  }
+  
+  
+.align-items-center {
+    justify-content: center; /* Center the items horizontally within the row */
+  }
