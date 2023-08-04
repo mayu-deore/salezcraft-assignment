@@ -1,0 +1,43 @@
+.header-of-banner{
+    font-weight: 800;
+    font-size: 46px;
+    padding: 0px;
+}
+
+.subtitle-of-banner{
+color: #999999;
+font-size: 18px;
+padding: 0px;
+}
+
+.input-box-div-style{
+    background-color: white;
+    display: flex;
+    width: 700px;
+    align-items: center;
+}
+
+.pop-ular-searches-div{
+    padding: 5px;
+    background-color: #CFE3F4;
+    color: #0969C3;
+    width: auto;
+}
+
+.pop-ular-searches-div p{
+    margin: 0px;
+}
+
+.pop-searches-flex{
+    display: flex;
+    gap: 5px;
+}
+
+.pop-ular-search-h-tag{
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+    font-size: 16px;
+    color: #111111;
+
+}
