@@ -2,14 +2,17 @@ import React from 'react'
 import { Card, Carousel, Button, Container } from 'react-bootstrap'
 import cardOneImage from '../../Assets/cardoneimage.png'
 import { AiFillStar } from 'react-icons/ai';
+import "./CarouselScreen.css"
 
 const CarouselScreen = () => {
   return (
     <Container>
-         <Carousel data-bs-theme="dark" interval={null} indicators={true}>
+         <Carousel data-bs-theme="dark"  indicators={false}>
+   
+
       <Carousel.Item>
         <div className="d-flex justify-content-center" style={{gap:"45px"}}>
-          <Card style={{ position: 'relative'}}>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
           <div style={{ backgroundColor:"white",padding:"10px" }}>
           {/* Add your button here */}
           <Button
@@ -19,7 +22,7 @@ const CarouselScreen = () => {
                 textAlign:'center',
               width: '120px', // Set the desired width here
               height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
+              backgroundColor: 'navy', // Set the background color here
               display: 'flex', // Use flexbox to center content
               justifyContent: 'center', // Center content horizontally
               alignItems: 'center', // Center content vertically
@@ -28,9 +31,9 @@ const CarouselScreen = () => {
             Click Me
           </Button>
         </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0UYLH2Wz2sKAGjiwgd-EAYII4LenBB6-Llg&usqp=CAU'/>
             <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
+              <Card.Title style={{textAlign:"start"}}>SAMSUNG</Card.Title>
               <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
                 <div>
                 Spine HR Suite
@@ -39,10 +42,11 @@ const CarouselScreen = () => {
                  <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
                 </div>
                 </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
             </Card.Body>
           </Card>
 
-          <Card style={{ position: 'relative'}}>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
           <div style={{ backgroundColor:"white",padding:"10px" }}>
           {/* Add your button here */}
           <Button
@@ -52,7 +56,7 @@ const CarouselScreen = () => {
                 textAlign:'center',
               width: '120px', // Set the desired width here
               height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
+              backgroundColor: 'green', // Set the background color here
               display: 'flex', // Use flexbox to center content
               justifyContent: 'center', // Center content horizontally
               alignItems: 'center', // Center content vertically
@@ -61,9 +65,9 @@ const CarouselScreen = () => {
             Click Me
           </Button>
         </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAoCwNsgsKKdYNW48BWam47wK95km5V9h0BSihC5YcVFJ83JuJtKK-bSoP1vZojm3YpI&usqp=CAU'/>
             <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
+              <Card.Title style={{textAlign:"start"}}>HP</Card.Title>
               <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
                 <div>
                 Spine HR Suite
@@ -72,10 +76,83 @@ const CarouselScreen = () => {
                  <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
                 </div>
                 </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
+            </Card.Body>
+          </Card>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
+          <div style={{ backgroundColor:"white",padding:"10px" }}>
+          {/* Add your button here */}
+          <Button
+            variant="primary"
+            style={{
+                alignItems:'center',
+                textAlign:'center',
+              width: '120px', // Set the desired width here
+              height: '30px', // Set the desired height here
+              backgroundColor: 'navy', // Set the background color here
+              display: 'flex', // Use flexbox to center content
+              justifyContent: 'center', // Center content horizontally
+              alignItems: 'center', // Center content vertically
+            }}
+          >
+            Click Me
+          </Button>
+        </div>
+            <Card.Img  style={{height:"100px", width:"100%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKY9pswIQKykxlbWq_j1tUCKkewQ8Vv4wRg&usqp=CAU"/>
+            <Card.Body style={{backgroundColor:"white", color:"black"}}>
+              <Card.Title style={{textAlign:"start"}}>ARTICULATE</Card.Title>
+              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
+                <div>
+                Spine HR Suite
+                </div>
+                <div>
+                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
+                </div>
+                </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
+            </Card.Body>
+          </Card>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
+          <div style={{ backgroundColor:"white",padding:"10px" }}>
+          {/* Add your button here */}
+          <Button
+            variant="primary"
+            style={{
+                alignItems:'center',
+                textAlign:'center',
+              width: '120px', // Set the desired width here
+              height: '30px', // Set the desired height here
+              backgroundColor: 'green', // Set the background color here
+              display: 'flex', // Use flexbox to center content
+              justifyContent: 'center', // Center content horizontally
+              alignItems: 'center', // Center content vertically
+            }}
+          >
+            Click Me
+          </Button>
+        </div>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='data:image/png;base64,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'/>
+            <Card.Body style={{backgroundColor:"white", color:"black"}}>
+              <Card.Title style={{textAlign:"start"}}>DELL</Card.Title>
+              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
+                <div>
+                Spine HR Suite
+                </div>
+                <div>
+                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
+                </div>
+                </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
             </Card.Body>
           </Card>
 
-          <Card style={{ position: 'relative'}}>
+         
+        </div>
+      </Carousel.Item>
+
+       <Carousel.Item>
+        <div className="d-flex justify-content-center" style={{gap:"45px"}}>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
           <div style={{ backgroundColor:"white",padding:"10px" }}>
           {/* Add your button here */}
           <Button
@@ -85,7 +162,7 @@ const CarouselScreen = () => {
                 textAlign:'center',
               width: '120px', // Set the desired width here
               height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
+              backgroundColor: 'navy', // Set the background color here
               display: 'flex', // Use flexbox to center content
               justifyContent: 'center', // Center content horizontally
               alignItems: 'center', // Center content vertically
@@ -94,9 +171,9 @@ const CarouselScreen = () => {
             Click Me
           </Button>
         </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0UYLH2Wz2sKAGjiwgd-EAYII4LenBB6-Llg&usqp=CAU'/>
             <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
+              <Card.Title style={{textAlign:"start"}}>SAMSUNG</Card.Title>
               <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
                 <div>
                 Spine HR Suite
@@ -105,10 +182,11 @@ const CarouselScreen = () => {
                  <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
                 </div>
                 </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
             </Card.Body>
           </Card>
 
-          <Card style={{ position: 'relative'}}>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
           <div style={{ backgroundColor:"white",padding:"10px" }}>
           {/* Add your button here */}
           <Button
@@ -118,7 +196,7 @@ const CarouselScreen = () => {
                 textAlign:'center',
               width: '120px', // Set the desired width here
               height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
+              backgroundColor: 'green', // Set the background color here
               display: 'flex', // Use flexbox to center content
               justifyContent: 'center', // Center content horizontally
               alignItems: 'center', // Center content vertically
@@ -127,9 +205,9 @@ const CarouselScreen = () => {
             Click Me
           </Button>
         </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAoCwNsgsKKdYNW48BWam47wK95km5V9h0BSihC5YcVFJ83JuJtKK-bSoP1vZojm3YpI&usqp=CAU'/>
             <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
+              <Card.Title style={{textAlign:"start"}}>HP</Card.Title>
               <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
                 <div>
                 Spine HR Suite
@@ -138,148 +216,82 @@ const CarouselScreen = () => {
                  <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
                 </div>
                 </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
             </Card.Body>
           </Card>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
+          <div style={{ backgroundColor:"white",padding:"10px" }}>
+          {/* Add your button here */}
+          <Button
+            variant="primary"
+            style={{
+                alignItems:'center',
+                textAlign:'center',
+              width: '120px', // Set the desired width here
+              height: '30px', // Set the desired height here
+              backgroundColor: 'navy', // Set the background color here
+              display: 'flex', // Use flexbox to center content
+              justifyContent: 'center', // Center content horizontally
+              alignItems: 'center', // Center content vertically
+            }}
+          >
+            Click Me
+          </Button>
+        </div>
+            <Card.Img  style={{height:"100px", width:"100%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKY9pswIQKykxlbWq_j1tUCKkewQ8Vv4wRg&usqp=CAU"/>
+            <Card.Body style={{backgroundColor:"white", color:"black"}}>
+              <Card.Title style={{textAlign:"start"}}>ARTICULATE</Card.Title>
+              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
+                <div>
+                Spine HR Suite
+                </div>
+                <div>
+                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
+                </div>
+                </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
+            </Card.Body>
+          </Card>
+          <Card style={{ position: 'relative', backgroundColor:"white", border:"1px solid black", padding:"5px"}}>
+          <div style={{ backgroundColor:"white",padding:"10px" }}>
+          {/* Add your button here */}
+          <Button
+            variant="primary"
+            style={{
+                alignItems:'center',
+                textAlign:'center',
+              width: '120px', // Set the desired width here
+              height: '30px', // Set the desired height here
+              backgroundColor: 'green', // Set the background color here
+              display: 'flex', // Use flexbox to center content
+              justifyContent: 'center', // Center content horizontally
+              alignItems: 'center', // Center content vertically
+            }}
+          >
+            Click Me
+          </Button>
+        </div>
+            <Card.Img  style={{height:"100px", width:"100%"}} src='data:image/png;base64,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'/>
+            <Card.Body style={{backgroundColor:"white", color:"black"}}>
+              <Card.Title style={{textAlign:"start"}}>DELL</Card.Title>
+              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
+                <div>
+                Spine HR Suite
+                </div>
+                <div>
+                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
+                </div>
+                </Card.Text>
+                <Button style={{color:"green",backgroundColor:"white",border:"1px solid green"}}>Request Callback</Button>
+            </Card.Body>
+          </Card>
+
+         
         </div>
       </Carousel.Item>
      
-      <Carousel.Item>
-        <div className="d-flex justify-content-center" style={{gap:"45px"}}>
-          <Card style={{ position: 'relative'}}>
-          <div style={{ backgroundColor:"white",padding:"10px" }}>
-          {/* Add your button here */}
-          <Button
-            variant="primary"
-            style={{
-                alignItems:'center',
-                textAlign:'center',
-              width: '120px', // Set the desired width here
-              height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
-              display: 'flex', // Use flexbox to center content
-              justifyContent: 'center', // Center content horizontally
-              alignItems: 'center', // Center content vertically
-            }}
-          >
-            Click Me
-          </Button>
-        </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
-            <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
-              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
-                <div>
-                Spine HR Suite
-                </div>
-                <div>
-                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
-                </div>
-                </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ position: 'relative'}}>
-          <div style={{ backgroundColor:"white",padding:"10px" }}>
-          {/* Add your button here */}
-          <Button
-            variant="primary"
-            style={{
-                alignItems:'center',
-                textAlign:'center',
-              width: '120px', // Set the desired width here
-              height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
-              display: 'flex', // Use flexbox to center content
-              justifyContent: 'center', // Center content horizontally
-              alignItems: 'center', // Center content vertically
-            }}
-          >
-            Click Me
-          </Button>
-        </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
-            <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
-              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
-                <div>
-                Spine HR Suite
-                </div>
-                <div>
-                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
-                </div>
-                </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ position: 'relative'}}>
-          <div style={{ backgroundColor:"white",padding:"10px" }}>
-          {/* Add your button here */}
-          <Button
-            variant="primary"
-            style={{
-                alignItems:'center',
-                textAlign:'center',
-              width: '120px', // Set the desired width here
-              height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
-              display: 'flex', // Use flexbox to center content
-              justifyContent: 'center', // Center content horizontally
-              alignItems: 'center', // Center content vertically
-            }}
-          >
-            Click Me
-          </Button>
-        </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
-            <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
-              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
-                <div>
-                Spine HR Suite
-                </div>
-                <div>
-                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
-                </div>
-                </Card.Text>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ position: 'relative'}}>
-          <div style={{ backgroundColor:"white",padding:"10px" }}>
-          {/* Add your button here */}
-          <Button
-            variant="primary"
-            style={{
-                alignItems:'center',
-                textAlign:'center',
-              width: '120px', // Set the desired width here
-              height: '30px', // Set the desired height here
-              backgroundColor: 'orange', // Set the background color here
-              display: 'flex', // Use flexbox to center content
-              justifyContent: 'center', // Center content horizontally
-              alignItems: 'center', // Center content vertically
-            }}
-          >
-            Click Me
-          </Button>
-        </div>
-            <Card.Img  style={{height:"100px", width:"100%"}} src="data:image/png;base64,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"/>
-            <Card.Body style={{backgroundColor:"white", color:"black"}}>
-              <Card.Title style={{textAlign:"start"}}>HR Interface</Card.Title>
-              <Card.Text style={{justifyContent:"space-between", display:"flex"}}>
-                <div>
-                Spine HR Suite
-                </div>
-                <div>
-                 <AiFillStar style={{fill:"orange",}}/> <span>4.5</span>
-                </div>
-                </Card.Text>
-            </Card.Body>
-          </Card>
-          
-          {/* Add more cards here */}
-        </div>
-      </Carousel.Item>
+     
+     
     </Carousel>
     
     </Container>

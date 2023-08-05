@@ -1,0 +1,12 @@
+/* Add this in your CSS file */
+@media (max-width: 768px) {
+    /* Mobile layout styles */
+    .d-flex.justify-content-center {
+      flex-direction: column;
+      align-items: center;
+    }
+    Card {
+      /* Add specific styles for mobile */
+    }
+  }
+  

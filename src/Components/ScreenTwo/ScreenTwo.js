@@ -1,20 +1,20 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import {  Container, Row } from 'react-bootstrap'
 import "./ScreenTwo.css"
 
 const ScreenTwo = () => {
   return (
     <Container>
-        <h1>Discover Top Software</h1>
-        <Row className="align-items-center">
-        <Col  xs="auto" className="hover-orange">All Categories</Col>
-        <Col className="hover-orange">Accounting</Col>
-        <Col className="hover-orange">Education</Col>
-        <Col className="hover-orange">ERM</Col>
-        <Col className="hover-orange">HR</Col>
-        <Col className="hover-orange">CRM</Col>
-        <Col className="hover-orange">Billing</Col>
-        </Row>
+        <h3 style={{color:'navy'}}>Discover Top Software</h3>
+        <div className="align-items-center" style={{paddingBottom:"20px",display:"flex",gap:"40px", flexWrap:"wrap", marginTop:'25px'}}>
+        <p className="hover-orange" style={{color:"orange", borderBottom:"3px solid orange"}}>All Categories</p>
+        <p className="hover-orange">Accounting</p>
+        <p className="hover-orange">Education</p>
+        <p className="hover-orange">ERM</p>
+        <p className="hover-orange">HR</p>
+        <p className="hover-orange">CRM</p>
+        <p className="hover-orange">Billing</p>
+        </div>
     </Container>
   )
 }

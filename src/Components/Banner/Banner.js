@@ -1,6 +1,6 @@
 import React from "react";
 import BannerImg from "../../Assets/Group14477@2x.png";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import "./Banner.css";
 
 const Banner = () => {
@@ -21,6 +21,15 @@ const Banner = () => {
         <p className="subtitle-of-banner">
           Search your career opportunity through 12,800 jobs{" "}
         </p>
+
+        <Row>
+          <Col sm={4}>
+            <span style={{display:"flex", border:"2px solid orange"}}>
+            <input type="text" placeholder="Search here..." style={{width:"100%", padding:"8px", border:"none"}}/>
+              <Button style={{borderRadius:"0px", color:"white", backgroundColor:"orange", border:"none"}}>Search</Button>
+            </span>
+          </Col>
+        </Row>
     
         <Row>
           <h3 className="pop-ular-search-h-tag">Popular Searches</h3>
