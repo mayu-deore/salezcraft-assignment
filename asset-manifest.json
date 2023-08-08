@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.8af63569.css",
-    "main.js": "/static/js/main.a55f2741.js",
-    "static/js/787.7773ad64.chunk.js": "/static/js/787.7773ad64.chunk.js",
-    "static/media/Group14477@2x.png": "/static/media/Group14477@2x.1c07094b3df991780c58.png",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.8af63569.css.map": "/static/css/main.8af63569.css.map",
-    "main.a55f2741.js.map": "/static/js/main.a55f2741.js.map",
-    "787.7773ad64.chunk.js.map": "/static/js/787.7773ad64.chunk.js.map"
+    "main.css": "/salezcraft-assignment/static/css/main.8af63569.css",
+    "main.js": "/salezcraft-assignment/static/js/main.afeb1da6.js",
+    "static/js/787.7773ad64.chunk.js": "/salezcraft-assignment/static/js/787.7773ad64.chunk.js",
+    "static/media/Group14477@2x.png": "/salezcraft-assignment/static/media/Group14477@2x.1c07094b3df991780c58.png",
+    "static/media/logo.svg": "/salezcraft-assignment/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/salezcraft-assignment/index.html",
+    "main.8af63569.css.map": "/salezcraft-assignment/static/css/main.8af63569.css.map",
+    "main.afeb1da6.js.map": "/salezcraft-assignment/static/js/main.afeb1da6.js.map",
+    "787.7773ad64.chunk.js.map": "/salezcraft-assignment/static/js/787.7773ad64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8af63569.css",
-    "static/js/main.a55f2741.js"
+    "static/js/main.afeb1da6.js"
   ]
 }
